@@ -2,5 +2,5 @@ smashuprepo
 ===========
 
 Test
-1234
+123456
 smashuprepo
