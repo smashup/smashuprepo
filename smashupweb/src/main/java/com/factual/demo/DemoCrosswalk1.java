@@ -1,5 +1,5 @@
 package com.factual.demo;
-
+ 
 import static com.factual.driver.FactualTest.factual;
 
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.Map;
 import com.factual.driver.Factual;
 import com.factual.driver.Query;
 import com.factual.driver.ReadResponse;
-
+  
 public class DemoCrosswalk1 {
   private static Factual factual = factual();
 

@@ -10,7 +10,7 @@ import com.factual.driver.ReadResponse;
 
 public class DemoCrosswalk2 {
   private static Factual factual = factual();
-
+ 
   public static void main(String[] args) {
     // Get Loopt's Crosswalk data for a specific Places entity, using its
     // Factual ID:

@@ -8,6 +8,7 @@ import com.factual.driver.Circle;
 import com.factual.driver.Factual;
 import com.factual.driver.Query;
 import com.factual.driver.ReadResponse;
+ 
 
 
 public class DemoCafeSearch {
@@ -47,7 +48,7 @@ public class DemoCafeSearch {
     for(Map<?, ?> record : resp.getData()) {
       System.out.println(record);
     }
-    
+     
     
 
   }
