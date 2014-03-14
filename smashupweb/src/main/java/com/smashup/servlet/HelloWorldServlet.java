@@ -1,4 +1,4 @@
-package com.smashup;
+package com.smashup.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
