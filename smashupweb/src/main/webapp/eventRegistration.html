@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <link rel="stylesheet" href="smashup.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+  <script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	  });
+  </script>
+</head>
+<body>
+
+	<div class="ui-grid-a"  style="width: 650px; align: centre;">
+		<div class="ui-block-a"></div>
+		<div class="ui-block-b">
+			<input id="nap150_15" type="text" placeholder="search existing event" class="napkeeComponent napkeeSearchbox search-query"/>
+		</div>
+		
+		<div class="ui-block-a">
+			<label for="text-1">Event Name</label>
+		</div>
+		<div class="ui-block-b">
+			<input name="text-1" id="text-1" data-clear-btn="true" placeholder="enter event name" maxlength="100" type="text"/>
+		</div>
+		
+		<div class="ui-block-a">
+			<label for="select-1">Theme</label>
+		</div>
+		<div class="ui-block-b">
+			<select name="select-1" id="select-1">
+				<option value="sports">Sports</option>
+				<option value="beauty">Beauty Products</option>
+				<option value="health">Health Related</option>
+			</select>
+		</div>
+		
+		<div class="ui-block-a"><label for="date-1">Date</label></div>
+		<div class="ui-block-b"><input name="date-1" type="text" id="datepicker"></div>
+		
+		<div class="ui-block-a"><label for="range-1">Duration in hrs</label></div>
+		<div class="ui-block-b"><input name="range-1" id="range-1" data-highlight="true" min="0" max="80" value="32" type="range"/></div>
+		
+		<div class="ui-block-a"><label for="location">Location</label></div>
+		<div class="ui-block-b"><input id="nap150_16" type="text" placeholder="search location" class="napkeeComponent napkeeSearchbox search-query"/></div>
+		
+		<div class="ui-block-a"><label for="radio-1"># of attendees</label></div>
+		<div class="ui-block-b">
+			<fieldset data-role="controlgroup" id="radio-1" name="radio-1">
+			<input name="radio-choice-1" id="radio-choice-1a" value="&lt; 50" type="radio"/>
+			<label for="radio-choice-1a">&lt; 50</label>
+			<input name="radio-choice-1" id="radio-choice-1b" value="50 - 100" type="radio" checked="checked"/>
+			<label for="radio-choice-1b">50 - 100</label>
+			<input name="radio-choice-1" id="radio-choice-1c" value="&gt; 100" type="radio"/>
+			<label for="radio-choice-1c">&gt; 100</label>
+		</fieldset>
+		</div>
+		
+			<a href="" id="button-1" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true" data-theme="b">Save and Next</a>
+	</div>
+
+</body>
+</html>
