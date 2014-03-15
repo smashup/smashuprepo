@@ -1,431 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 
-<fieldset id="nap82_0" class="napkeeComponent napkeeFieldSet">
-	<legend>Secondary themes</legend>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <link rel="stylesheet" href="/css/smashup.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
-</fieldset>
+<title>Co-sponsor Your Event</title>
+<link href="/css/styleguide.css" rel="stylesheet" />
+<!-- IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	  });
+	  $('#event').submit(function(data) {
+		 alert(data);
+	  });
+	  
+	  $.getJSON(
+		"https://nielsen.api.tibco.com:443/RMS/v1/Metadata/?apiname=manufacturerDolShr&apikey=1504-71e5a462-f1d2-4f8c-a518-0a3bd9ba1916",
+		 function(data) {
+		 	var toAppend = '';
+	        $.each(data.Metadata.category.metadataValue,function(i,o){
+	           toAppend += '<option value='+i+'>'+o+'</option>';
+	          });
+	         $('#select-1').append(toAppend);
+		 });
+</script>
+</head>
+<body>
 
-<img id="nap82_1_0_0" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_0table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_0label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
+<div id="header-area">
+	<div id="banner"></div>
+</div>
 
+<div class="clear"></div>
 
-<img id="nap82_1_0_1" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_1table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_1label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
+    <ul class="menu">
+    <li><a href="/index.html">Event</a></li>
+    <li><a href="mailto:smashupteam2014@gmail.com">Contact us</a></li>
+    </ul>
 
-
-<img id="nap82_1_0_2" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_2table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_2label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_3" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_3table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_3label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_4" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_4table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_4label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_5" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_5table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_5label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_6" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_6table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_6label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_7" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_7table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_7label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap82_1_0_8" src="js/holder.js/77x79"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap82_1_0_8table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap82_1_0_8label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<span id="nap82_1_0_9" class="napkeeComponent napkeeLabel ">Tag
-	secondary themes</span>
-
-<span id="containernap82_1_1" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_1" class="checkbox"> <input id="nap82_1_1"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_2" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_2" class="checkbox"> <input id="nap82_1_2"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_3" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_3" class="checkbox"> <input id="nap82_1_3"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_4" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_4" class="checkbox"> <input id="nap82_1_4"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_5" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_5" class="checkbox"> <input id="nap82_1_5"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_6" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_6" class="checkbox"> <input id="nap82_1_6"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_7" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_7" class="checkbox"> <input id="nap82_1_7"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_8" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_8" class="checkbox"> <input id="nap82_1_8"
-		type="checkbox" />
-</label>
-</span>
-
-<span id="containernap82_1_9" class="napkeeComponent napkeeCheckbox">
-	<label for="nap82_1_9" class="checkbox"> <input id="nap82_1_9"
-		type="checkbox" />
-</label>
-</span>
-
-<div id="nap82_2" class="napkeeComponent napkeeUnsupported">Sorry,
-	this components is not supported (yet!)</div>
-
-<div id="nap82_3" class="napkeeComponent napkeeUnsupported">Sorry,
-	this components is not supported (yet!)</div>
-
-<span id="containernap83_0" class="napkeeComponent napkeeCheckbox">
-	<label for="nap83_0" class="checkbox"> <input id="nap83_0"
-		type="checkbox" />
-</label>
-</span>
-
-<fieldset id="nap83_1" class="napkeeComponent napkeeFieldSet">
-	<legend>Prospective CoSponsors</legend>
-
-</fieldset>
-
-<div id="nap83_2"
-	class="napkeeComponent napkeeTabbar tabbable tabs-left">
-	<ul class="nav nav-tabs">
-		<li><a id="nap83_2i0" href="#nap83_2-0" data-toggle="tab">Brands</a></li>
-		<li><a id="nap83_2i1" href="#nap83_2-1" data-toggle="tab">Hotels</a></li>
-		<li><a id="nap83_2i2" href="#nap83_2-2" data-toggle="tab">Food</a></li>
-	</ul>
-	<div class="tab-content">
-		<div id="nap83_2-0" class="tab-pane"></div>
-		<div id="nap83_2-1" class="tab-pane"></div>
-		<div id="nap83_2-2" class="tab-pane"></div>
+<div class="clear"></div>
+<div id="main">
+<form id="event" action="attendeeProfile.html" method="post">
+<div class="ui-grid-a"  style="width: 80%; align: centre;">
+		<div class="ui-block-a"></div>
+		<div class="ui-block-b">
+			<input id="nap150_15" type="text" placeholder="search existing event" class="napkeeComponent napkeeSearchbox search-query"/>
+		</div>
+		
+		<div class="ui-block-a">
+			<label for="text-1" class="ui-label">Event Name</label>
+		</div>
+		<div class="ui-block-b">
+			<input name="text-1" id="text-1" data-clear-btn="true" placeholder="enter event name" maxlength="100" type="text" required="required"/>
+		</div>
+		
+		<div class="ui-block-a">
+			<label for="select-1" class="ui-label">Theme</label>
+		</div>
+		<div class="ui-block-b">
+			<select name="select-1" id="select-1" >
+				<option value="" disabled selected>Please select your theme</option>
+			</select>
+		</div>
+		
+		<div class="ui-block-a">
+			<label for="date-1" class="ui-label">Date</label>
+		</div>
+		<div class="ui-block-b">
+			<input name="date-1" type="text" id="datepicker">
+		</div>
+		
+		<div class="ui-block-a"><label for="range-1" class="ui-label">Duration in hrs</label></div>
+		<div class="ui-block-b"><input name="range-1" id="range-1" data-highlight="true" min="0" max="80" value="32" type="range"/></div>
+		
+		<div class="ui-block-a"><label for="location" class="ui-label">Location</label></div>
+		<div class="ui-block-b"><input id="nap150_16" type="text" placeholder="search location" class="napkeeComponent napkeeSearchbox search-query"/></div>
+		
+		<div class="ui-block-a"><label for="radio-1" class="ui-label"># of attendees</label></div>
+		<div class="ui-block-b">
+			<fieldset data-role="controlgroup" id="radio-1" name="radio-1">
+			<input name="radio-choice-1" id="radio-choice-1a" value="&lt; 50" type="radio"/>
+			<label for="radio-choice-1a">&lt; 50</label>
+			<input name="radio-choice-1" id="radio-choice-1b" value="50 - 100" type="radio" checked="checked"/>
+			<label for="radio-choice-1b">50 - 100</label>
+			<input name="radio-choice-1" id="radio-choice-1c" value="&gt; 100" type="radio"/>
+			<label for="radio-choice-1c">&gt; 100</label>
+		</fieldset>
+		</div>
+		<div class="ui-block-a"></div>
+		<div class="ui-block-b">
+			<input type="submit" value="Save and Next" />
+			<!-- <a href="attendeeProfile.html" id="button-1" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true" data-theme="b">Save and Next</a> -->
+		</div>
 	</div>
+	</form>
 </div>
 
+<div class="clear"></div>
 
-<table id="nap83_3" class="napkeeComponent napkeeIconLabel">
-	<tr>
-		<td>&nbsp;</td>
-		<td align="center"><img id="nap83_3-i"
-			src="icons/napkee/EmptyIcon.png" class="napkeeComponent napkeeIcon" />
-		</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td valign="middle" align="center">KELLOGG&apos;S</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
-
-<table id="nap83_4" class="napkeeComponent napkeeIconLabel">
-	<tr>
-		<td>&nbsp;</td>
-		<td align="center"><img id="nap83_4-i"
-			src="icons/napkee/EmptyIcon.png" class="napkeeComponent napkeeIcon" />
-		</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td valign="middle" align="center">QUAKER</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
-
-<table id="nap83_5" class="napkeeComponent napkeeIconLabel">
-	<tr>
-		<td>&nbsp;</td>
-		<td align="center"><img id="nap83_5-i"
-			src="icons/napkee/EmptyIcon.png" class="napkeeComponent napkeeIcon" />
-		</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td valign="middle" align="center">MOTHER&apos;S</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
-
-<table id="nap83_6" class="napkeeComponent napkeeIconLabel">
-	<tr>
-		<td>&nbsp;</td>
-		<td align="center"><img id="nap83_6-i"
-			src="icons/napkee/EmptyIcon.png" class="napkeeComponent napkeeIcon" />
-		</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td valign="middle" align="center">KISAN</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
-
-<div id="nap83_7" class="napkeeComponent napkeeHslider"></div>
-
-<div id="nap83_8" class="napkeeComponent napkeeHslider"></div>
-
-<div id="nap83_9" class="napkeeComponent napkeeHslider"></div>
-
-<div id="nap83_10" class="napkeeComponent napkeeHslider"></div>
-
-<textarea id="nap83_11" class="napkeeComponent napkeeTextarea"></textarea>
-
-<textarea id="nap83_12" class="napkeeComponent napkeeTextarea"></textarea>
-
-<textarea id="nap83_13" class="napkeeComponent napkeeTextarea"></textarea>
-
-<textarea id="nap83_14" class="napkeeComponent napkeeTextarea"></textarea>
-
-<iframe id="nap83_15"
-	src="http://www.napkee.com/components/NapkeeHostedMaps/?loc=Vienna, Austria"
-	class="napkeeComponent napkeeMap"></iframe>
-
-<iframe id="nap83_16"
-	src="http://www.napkee.com/components/NapkeeHostedMaps/?loc=Vienna, Austria"
-	class="napkeeComponent napkeeMap"></iframe>
-
-<iframe id="nap83_17"
-	src="http://www.napkee.com/components/NapkeeHostedMaps/?loc=Vienna, Austria"
-	class="napkeeComponent napkeeMap"></iframe>
-
-<iframe id="nap83_18"
-	src="http://www.napkee.com/components/NapkeeHostedMaps/?loc=Vienna, Austria"
-	class="napkeeComponent napkeeMap"></iframe>
-
-<span id="nap83_19" class="napkeeComponent napkeeLabel ">Call</span>
-
-<span id="nap83_20" class="napkeeComponent napkeeLabel ">Co
-	Sponsor</span>
-
-<span id="nap83_21" class="napkeeComponent napkeeLabel ">Contact
-	deails</span>
-
-<span id="nap83_22" class="napkeeComponent napkeeLabel ">Cosponsor
-	Match Perentage</span>
-
-<div id="nap83_23" class="napkeeComponent napkeeUnsupported">Sorry,
-	this components is not supported (yet!)</div>
-
-<fieldset id="nap163_0" class="napkeeComponent napkeeFieldSet">
-	<legend>Do you know little more about attendees at this time ?</legend>
-
-</fieldset>
-
-<div id="nap163_1" class="napkeeComponent napkeeRadiobuttonGroup">
-	<label for="nap163_1i0" class="radio">
-		<input name="nap163_1" id="nap163_1i0" type="radio" /> &lt;25 years
-	</label> 
-	<label for="nap163_1i1" class="radio">
-		<input name="nap163_1" id="nap163_1i1" type="radio" checked="true" /> 25 &ndash; 50 years
-	</label> 
-	<label for="nap163_1i2" class="radio">
-		<input name="nap163_1" id="nap163_1i2" type="radio" /> &gt;50 years
-	</label>
+<div id="copyright">
+	<div id="copyright-text">Copyright @ co-sponsoryourevent</div>
+    <div id="version-text">1.0</div>
 </div>
 
-<span id="nap163_2" class="napkeeComponent napkeeLabel ">Age group</span>
-
-<span id="nap163_3" class="napkeeComponent napkeeLabel ">Race distribution</span>
-
-<span id="nap163_4" class="napkeeComponent napkeeLabel ">Gender distribution</span>
-
-<div id="nap163_5" class="napkeeComponent napkeeRadiobuttonGroup">
-	<label for="nap163_5i0" class="radio">
-		<input name="nap163_5" id="nap163_5i0" type="radio" /> Asian
-	</label> 
-	<label for="nap163_5i1" class="radio">
-		<input name="nap163_5" id="nap163_5i1" type="radio" checked="true" /> Latino
-	</label> 
-	<label for="nap163_5i2" class="radio">
-		<input name="nap163_5" id="nap163_5i2" type="radio" /> Caucasian
-	</label>
-</div>
-
-<div id="nap163_6" class="napkeeComponent napkeeUnsupported">Sorry,
-	this components is not supported (yet!)</div>
-
-<img id="nap163_7" src="images/imported/Dial_nap163_7.JPG"
-	class="napkeeComponent napkeeImage" />
-<table border="0" id="nap163_7table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap163_7label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<img id="nap163_8" src="images/imported/Dial_nap163_8.JPG" class="napkeeComponent napkeeImage" />
-<table border="0" id="nap163_8table" class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap163_8label" class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-<img id="nap163_9" src="images/imported/Dial_nap163_9.JPG" class="napkeeComponent napkeeImage" />
-<table border="0" id="nap163_9table"
-	class="napkeeComponent napkeeImageTable">
-	<tr>
-		<td align="center" valign="middle"><span id="nap163_9label"
-			class="napkeeImageLabel"></span></td>
-	</tr>
-</table>
-
-
-<fieldset id="nap150_0" class="napkeeComponent napkeeFieldSet">
-	<legend>Event Registration</legend>
-
-</fieldset>
-
-<span id="nap150_1" class="napkeeComponent napkeeLabel ">Event
-	Name</span>
-
-<input id="nap150_2" type="text" value=""
-	class="napkeeComponent napkeeTextinput" />
-
-<span id="nap150_3" class="napkeeComponent napkeeLabel ">Theme</span>
-
-<span id="nap150_4" class="napkeeComponent napkeeLabel ">Start
-	Date</span>
-
-<select id="nap150_5" class="napkeeComponent napkeeCombobox">
-	<option>Sports</option>
-	<option>Beauty</option>
-	<option>Health Related</option>
-</select>
-
-<div id="nap150_6"
-	class="input-append date napkeeComponent napkeeDatechooser"
-	data-date="  /  /    ">
-	<input id="nap150_6dp" type="text" disabled="${disabled}"
-		value="  /  /    "> <span class="add-on"><i
-		class="icon-calendar"></i></span>
-</div>
-
-<span id="nap150_7" class="napkeeComponent napkeeLabel ">Duration
-	(hrs)</span>
-
-<input id="nap150_8" class="napkeeComponent napkeeNumericstepper"
-	type="number" value="3" />
-
-<span id="nap150_9" class="napkeeComponent napkeeLabel "># of
-	attendees</span>
-
-<div id="nap150_10" class="napkeeComponent napkeeRadiobuttonGroup">
-	<label for="nap150_10i0" class="radio"><input name="nap150_10"
-		id="nap150_10i0" type="radio" checked="true" /> &lt;50</label> <label
-		for="nap150_10i1" class="radio"><input name="nap150_10"
-		id="nap150_10i1" type="radio" /> 50 &ndash; 100</label> <label
-		for="nap150_10i2" class="radio"><input name="nap150_10"
-		id="nap150_10i2" type="radio" /> 100 &ndash; 500</label> <label
-		for="nap150_10i3" class="radio"><input name="nap150_10"
-		id="nap150_10i3" type="radio" /> &gt;500</label>
-
-
-
-</div>
-
-<div id="nap150_11" class="napkeeComponent napkeeUnsupported">Sorry,
-	this components is not supported (yet!)</div>
-
-<span id="nap150_12" class="napkeeComponent napkeeLabel ">Location</span>
-
-<input id="nap150_13" type="text" placeholder="Enter location"
-	class="napkeeComponent napkeeSearchbox search-query" />
-
-<div id="nap150_14" class="napkeeComponent napkeePiechart"></div>
-
-<input id="nap150_15" type="text" placeholder="search existing event"
-	class="napkeeComponent napkeeSearchbox search-query" />
-
+</body>
+</html>

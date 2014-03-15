@@ -1,0 +1,42 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"RMS Metadata API",
+    "Date":"2014-03-15T14:38:00.119-04:00",
+    "MessageID":"84578",
+    "Content_Type":"JSON"
+  },
+  "Metadata":{
+    "category":{
+      "metadataValue":[
+        "CEREAL-READY TO EAT",
+        "FACIAL TISSUE",
+        "HAND AND BODY LOTION-ADULT",
+        "HEALTH BARS AND STICKS",
+        "SNACKS-POTATO CHIPS",
+        "SPORT DRINK",
+        "TOOTH CLEANER",
+        "TOOTHBRUSHES",
+        "WATER-BOTTLED-NONCARBONATED"
+      ]
+    },
+    "manufacturer":{
+      "metadataValue":[
+        "21ST CENTURY FORMULATIONS",
+        "21ST CENTURY HEALTH CARE INC",
+        "2T WATER LLC",
+        "3-D AND COMPANY\/ B-REAL PRODUCTS",
+        "3300 ARTESIAN INCORPORATED",
+        "3D MARKETING",
+        "3M COMPANY",
+        "99 CENTS ONLY STORES",
+        "99 POINT NINE LLC",
+        "A BETTER WATER INC"
+      ]
+    }
+  },
+  "Summary":{
+    "totalCategoryCount":"9",
+    "totalManufacturerCount":"10"
+  }
+}
