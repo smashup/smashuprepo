@@ -1096,8 +1096,13 @@
 	width:350px;
 	height:12px;
 }                
-.ui-grid-a > :nth-child(n) {
+.ui-grid-a > :nth-child(odd) {
 	width: 25%;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.ui-grid-a > :nth-child(even) {
+	width: 65%;
 	margin-right: 10px;
 	margin-left: 10px;
 }
