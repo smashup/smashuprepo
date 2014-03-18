@@ -56,49 +56,14 @@
             <version>4.0.1.Final</version>
         </dependency> -->		
 	
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>14.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.api-client</groupId>
-			<artifactId>google-api-client</artifactId>
-			<version>1.15.0-rc</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>1.9.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.12</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20131018</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<version>1.12</version>
-		</dependency>
+		<!-- factual Drivers -->
 		
-		
+		<dependency>
+			<groupId>com.factual</groupId>
+			<artifactId>factual-java-driver</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+        
 		<!-- Jersy Client For Nielson Api-->
 		<dependency>
 			<groupId>junit</groupId>
@@ -140,7 +105,7 @@
            <version>1.0.18</version>
         </dependency>
         
-		<!-- Gson lob -->
+		<!-- Gson lib -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
