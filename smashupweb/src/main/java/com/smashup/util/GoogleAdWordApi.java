@@ -9,16 +9,16 @@ import java.util.Set;
 import org.relique.jdbc.csv.CsvDriver;
 
 public class GoogleAdWordApi {
+	
 	public static void main(String[] args) {
 		// 1. List the file
-		// getSubCategoryByCategory("Apparel"); //Apparel //Footwear //Arts &
-		// Entertainment
+		 getSubCategoryByCategory("Apparel"); //Apparel //Footwear //Arts & // Entertainment
 
 		// 2. get Category
 		//getAllCategory();
 		
 		// 3. contect search
-		contentSearch("Spa & Medical Spa");
+		//contentSearch("Spa & Medical Spa");
 	}
 
 	public static void contentSearch(String searchstring) {
@@ -44,7 +44,7 @@ public class GoogleAdWordApi {
 
 			while (results.next()) {
 				String categoryStr = results.getString("Category");
-				if(categoryStr.contains(searchstring)){
+				if(categoryStr.toUpperCase().contains(searchstring.toUpperCase())){
 					set.add(categoryStr);
 				}
 			}

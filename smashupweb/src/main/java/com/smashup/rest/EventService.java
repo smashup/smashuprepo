@@ -35,13 +35,6 @@ public class EventService {
 		
 		return Response.status(200).entity(output).build();
 	}
-	
-	public EventManager getEventManager() {
-		return eventManager;
-	}
 
-	public void setEventManager(EventManager eventManager) {
-		this.eventManager = eventManager;
-	}	
  
 }
