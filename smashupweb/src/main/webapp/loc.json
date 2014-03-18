@@ -1,0 +1,13 @@
+{"cosponsor":
+	[{
+    	"id": 1,
+    	"name": "Pepsi",
+    	"address": "123-456-666",
+    	"location": "33.89342,-84.30715"},
+	 {
+    	"id": 2,
+	    "name": "Cocacola",
+    	"address": "123-456-345",
+	    "location": "13.89342,-84.30715" 
+	 }]
+}

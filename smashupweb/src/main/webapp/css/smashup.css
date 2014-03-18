@@ -1096,8 +1096,23 @@
 	width:350px;
 	height:12px;
 }                
-.ui-grid-a > :nth-child(n) {
+.ui-grid-a > :nth-child(odd) {
 	width: 25%;
 	margin-right: 10px;
 	margin-left: 10px;
+}
+.ui-grid-a > :nth-child(even) {
+	width: 65%;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#ui-label{
+		font-size: 16px;
+		font-color: red;
+        font-style:normal;
+        font-weight:normal;
+        text-decoration:none;
+}
+.small-font{
+	font: bold 11px Arial !important;
 }
