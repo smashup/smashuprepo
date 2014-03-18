@@ -1,6 +1,5 @@
 package com.smashup.rest;
 
-import java.util.List;
 import java.util.logging.Logger;
 
 import javax.enterprise.context.RequestScoped;
@@ -10,7 +9,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
-import com.smashup.model.Event;
 import com.smashup.service.EventManager;
  
 @Path("/event")
@@ -28,10 +26,12 @@ public class EventService {
 	public Response getMsg(@PathParam("param") String msg) {
  
 		String output = "Event say : " + msg;
-		List<Event> eventList = eventManager.getAllEvent();
+		
+		/*
+		 List<Event> eventList = eventManager.getAllEvent();
 		for (Event event : eventList) {
 			log.info("event "+event.getEventid());
-		}
+		}*/
 		
 		return Response.status(200).entity(output).build();
 	}

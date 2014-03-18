@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 
 import com.smashup.model.Event;
 
 @Stateless
+@Named
 public class EventManager {
 
 	@Inject

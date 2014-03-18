@@ -1,0 +1,12 @@
+Rest API -- done
+google ad word api -- done
+Mysql JPA -- 
+UTIL -- httpURl for rest call sample
+
+Nielson API using latest jersy -- done chnage
+html pages
+
+Servlet example -- done
+JSP sample code
+
+factual api
