@@ -3,9 +3,7 @@ package com.smashup.service;
 import java.util.List;
 
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
 
 import com.smashup.model.Event;
 
@@ -13,10 +11,10 @@ import com.smashup.model.Event;
 @Named
 public class EventManager {
 
-	@Inject
-	private EntityManager em;
+	//@Inject
+	//private EntityManager em = new EntityManager();
 	
 	public List<Event> getAllEvent(){
-		return (List<Event>) em.createNamedQuery("Event.findAll");	
+		return null;//(List<Event>) em.createNamedQuery("Event.findAll");	
 	}
 }

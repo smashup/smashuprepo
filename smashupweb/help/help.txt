@@ -10,3 +10,16 @@ Servlet example -- done
 JSP sample code
 
 factual api
+
+#URL Git URL
+#https://github.com/smashup/smashuprepo.git
+
+##########################################
+##Rest
+#GoogleAPI
+#getSecondaryThemes 
+http://localhost:8080/smashupweb/rest/googleadword/Spa%20&%20Medical%20Spa
+
+#NielsonAPI
+#getSecondaryThemes
+http://localhost:8080/smashupweb/rest/nielson/0016000275270
