@@ -11,6 +11,7 @@ import org.relique.jdbc.csv.CsvDriver;
 public class GoogleAdWordApi {
 	
 	public static void main(String[] args) {
+		GoogleAdWordApi googleAdWordApi = new GoogleAdWordApi();
 		// 1. List the file
 		 getSubCategoryByCategory("Apparel"); //Apparel //Footwear //Arts & // Entertainment
 

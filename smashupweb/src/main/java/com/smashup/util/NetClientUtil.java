@@ -45,8 +45,7 @@ public class NetClientUtil implements Configuration {
 	}
 
 	// Get all the stores frequented by dominant demography
-	public String getStoresBydemography(String dominatrace,
-			String dominatageGroup) {
+	public String getStoresBydemography(String dominatrace, String dominatageGroup) {
 		String tmpURL = String.format("%s%s?agegroup=%s&race=%s&apikey=%s", BASEHACKATHLONHOST, "Stores/v1/demographic/", dominatageGroup, dominatrace, APIKEY);
 		return getJsonString(tmpURL);
 	}
