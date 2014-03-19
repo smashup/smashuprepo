@@ -13,6 +13,13 @@ factual api
 
 #URL Git URL
 #https://github.com/smashup/smashuprepo.git
+ERROR
+master:master[resjected - non-fast-forward]
+Resolution : git pull /it pull -rebase
+--------
+
+DIRTY_WORKTREE	smashupweb/.settings/org.eclipse.wst.common.component
+
 
 ##########################################
 ##Rest
