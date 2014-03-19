@@ -26,7 +26,7 @@ public class GoogleAPIService {
 		String tmp = gson.toJson(secondaryThemeList);
 		System.out.println(tmp);
 		
-		return Response.status(200).entity(tmp).build();
+		return Response.status(200).entity(tmp).build(); 
 	}
 	
 }

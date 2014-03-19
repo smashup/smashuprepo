@@ -30,7 +30,7 @@ public class NielsonAPIService {
 		String jsonResponse = gson.toJson(secondaryThemeStr);
 		System.out.println(jsonResponse);
 		
-		return Response.status(200).entity(jsonResponse).build();
+		return Response.status(200).entity(jsonResponse).build(); 
 	}
 	
 }
