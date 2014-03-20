@@ -25,14 +25,14 @@ public class GoogleAdWordAPIUtil {
 		// getAllCategory();
 
 		// 3. contect search
-		List<String> tmp = googleAdWordApi.contentSearch("Spa & Medical Spa");
+		List<String> tmp = googleAdWordApi.getProductByCategory("CEREAL"); 
 
 		for (String string : tmp) {
 			System.out.println(tmp);
 		}
 	}
 
-	public List<String> contentSearch(String searchstring) {
+	public List<String> getProductByCategory(String product) {
 
 		try {
 
@@ -40,18 +40,15 @@ public class GoogleAdWordAPIUtil {
 			// Create a Statement object to execute the query with.
 			// A Statement is not thread-safe.
 			Statement stmt = conn.createStatement();
-
 			String query = "SELECT ID,Category FROM productsservices";
-
 			System.out.println("Query " + query);
-
+			
 			ResultSet results = stmt.executeQuery(query);
-
 			Set<String> set = new HashSet<String>();
 
 			while (results.next()) {
 				String categoryStr = results.getString("Category");
-				if (categoryStr.toUpperCase().contains(searchstring.toUpperCase())) {
+				if (categoryStr.toUpperCase().contains(product.toUpperCase())) {
 					//categoryStr.split(regex)
 					//Pick the last string
 					String lastString = categoryStr.substring(categoryStr.lastIndexOf("/")+1,categoryStr.length());
@@ -60,9 +57,9 @@ public class GoogleAdWordAPIUtil {
 				}
 			}
 
-			for (String temp : set) {
+			/*for (String temp : set) {
 				System.out.println(temp);
-			}
+			}*/
 
 			// Convert Set to List
 			List<String> list = new ArrayList<String>(set);

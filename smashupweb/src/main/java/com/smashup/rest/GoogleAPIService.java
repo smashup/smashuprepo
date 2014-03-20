@@ -20,7 +20,7 @@ public class GoogleAPIService {
 	public Response getSecondaryTheme(@PathParam("param") String searchStr) {
 		 
 		String output = "Search string : " + searchStr;
-		List<String> secondaryThemeList = googleAdWordApi.contentSearch(searchStr);
+		List<String> secondaryThemeList = googleAdWordApi.getProductByCategory(searchStr);
 		
 		Gson gson = new Gson();
 		String tmp = gson.toJson(secondaryThemeList);

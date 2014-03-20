@@ -16,16 +16,37 @@ public class FactualAPIUtil {
 	public static void main(String[] args) {
 		//getCPG();
 		FactualAPIUtil factualApi = new FactualAPIUtil();
-		factualApi.getProduct("Skin");
+		//factualApi.getProduct("Skin");
+		//factualApi.getProduct("Drink");
+		//factualApi.getProduct("Energy Drinks");
+		//factualApi.getProduct("Soft Drinks");
+		//factualApi.getProduct("Sports Drinks");
+		
+		factualApi.getProduct("Cereal & Grain");
+		factualApi.getProduct("Breakfast Cereals");
+		
+		//Google Ad Word
+		//Underage Drinking & Underage Alcohol Abuse
+		///Alcohol Free Drink Mixers
+		//Energy Drinks
+		//Soft Drinks
+		//Sports Drinks
+		
 	}
 	
-	private void getProduct(String category) {
-			//http://www.factual.com/data/t/products-cpg-nutrition#filters={"$and":[{"category":{"$eq":"SKIN+CARE"}}]}
+	public String getProduct(String category) {
+		//http://www.factual.com/data/t/products-cpg-nutrition#filters={"$and":[{"category":{"$eq":"SKIN+CARE"}}]}
 	
 		Factual factual = factual();
-
-	    System.out.println(
-	        factual.fetch("places", new Query().limit(3)));
+	    
+		// Search for products containing the word "shampoo"
+	    Query query = new Query().only("image_urls", "category").search(category);
+	    //query.field("image_urls");
+	    ReadResponse resp = factual.fetch("products-cpg", query);
+	    System.out.println(resp.getJson());
+	    
+	    return resp.getJson();
+	    
 	}
 	
 	private static void getCPG() {
@@ -40,8 +61,7 @@ public class FactualAPIUtil {
 		 */
 
 		Query q = new Query()
-		// .only("name", "address")
-				.search("cpg")
+		// .only("name", "address").search("cpg")
 				// .search("nutrition")
 				// .within(new Circle(34.06018, -118.41835, 5000))
 				// .field("postcode").isEqual("72956")

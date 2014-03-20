@@ -14,8 +14,8 @@ public class OpportunityDimensionMap {
 			// Call Nielsen API to load the data 
 			storeByRace = new HashMap(); 
 			NielsenAPIUtil na = new NielsenAPIUtil();			
-			
-			String jsonResponse = na.getStoresBydemography(Configuration.RACE_WHITE, Configuration.AGE_18_24);
+			//TODO remove 1,25
+			String jsonResponse = na.getStoresBydemography(Configuration.RACE_WHITE, Configuration.AGE_18_24,1,25);
 			List<String> storename=  JsonPath.read(jsonResponse, "$..StoreName");
 		}
 	}
