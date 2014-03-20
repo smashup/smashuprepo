@@ -17,23 +17,30 @@
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script>
-	  $(function() {
-	    $( "#datepicker" ).datepicker();
-	  });
-	  $('#event').submit(function(data) {
-		 alert(data);
-	  });
-	  
+$(document).ready(function() {
+    $( "#datepicker" ).datepicker(); //for the date picker
+    
+	//Populate the select dropdown
 	  $.getJSON(
 		//"https://nielsen.api.tibco.com:443/RMS/v1/Metadata/?apiname=manufacturerDolShr&apikey=1504-71e5a462-f1d2-4f8c-a518-0a3bd9ba1916",
-		"categorytest.json",
+		"themes.json",
 		 function(data) {
 		 	var toAppend = '';
-	        $.each(data.Metadata.category.metadataValue,function(i,o){
-	           toAppend += '<option value='+i+'>'+o+'</option>';
+	        $.each(data, function(i,o){
+	           toAppend += '<option value='+o.key+'>'+o.value+'</option>';
 	          });
-	         $('#select-1').append(toAppend);
-		 });
+	         $('#theme').append(toAppend);
+		});
+
+	//On for submit, save selected theme in the session storage 
+	    $( "#event" ).submit(function( event ) {
+			  sessionStorage.setItem("theme", $('#theme option:selected').val());
+			  sessionStorage.setItem("location", $('#location').val());
+			  window.location="profile.html";
+			  return false;
+		});
+});
+	 
 </script>
 </head>
 <body>
@@ -51,11 +58,11 @@
 
 <div class="clear"></div>
 <div id="main">
-<form id="event" action="profile.html" method="post" data-ajax="false">
+<form id="event" method="post" data-ajax="false">
 <div class="ui-grid-a"  style="width: 100%; align: centre;">
 		<div class="ui-block-a"></div>
 		<div class="ui-block-b">
-			<input id="nap150_15" type=search placeholder="search existing event" />
+			<input id="eventsearch" type=search placeholder="search existing event" />
 		</div>
 		
 		<div class="ui-block-a">
@@ -69,7 +76,7 @@
 			<label for="select-1" class="ui-label">Theme</label>
 		</div>
 		<div class="ui-block-b">
-			<select name="select-1" id="select-1" >
+			<select name="select-1" id="theme" required="required">
 				<option value="" disabled selected>Please select your theme</option>
 			</select>
 		</div>
@@ -85,7 +92,7 @@
 		<div class="ui-block-b"><input name="range-1" id="range-1" data-highlight="true" min="0" max="80" value="32" type="range"/></div>
 		
 		<div class="ui-block-a"><label for="location" class="ui-label">Location</label></div>
-		<div class="ui-block-b"><input id="nap150_16" type="search" placeholder="search location"/></div>
+		<div class="ui-block-b"><input id="location" type="search" placeholder="search location"/></div>
 		
 		<div class="ui-block-a"><label for="radio-1" class="ui-label"># of attendees</label></div>
 		<div class="ui-block-b">
@@ -99,12 +106,13 @@
 		</fieldset>
 		</div>
 		<div class="ui-block-a"></div>
-		<div class="ui-block-b">
-			<input type="submit" value="Save and Next" data-icon="arrow-r" data-iconpos="right"/>
+		<div class="ui-block-b" style="width: 30%">
+		<!-- <input type="submit" value="Save and Next" data-icon="arrow-r" data-iconpos="right" style="width: 80%" id="save"/> -->
+			<button type="submit" value="Save and Next" onsubmit="" data-icon="arrow-r" data-iconpos="right" style="width: 80%" id="save"></button>
 			<!-- <a href="attendeeProfile.html" id="button-1" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true" data-theme="b">Save and Next</a> -->
 		</div>
 	</div>
-	</form>
+</form>
 </div>
 
 <div class="clear"></div>

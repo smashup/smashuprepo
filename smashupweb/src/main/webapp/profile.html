@@ -19,6 +19,24 @@
 <!-- IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script>
+$(document).ready(function() {
+	//var maintheme = sessionStorage.getItem("theme");
+	//var location = sessionStorage.getItem("location");
+	
+	//On for submit, save selected theme in the session storage 
+    $('#profile').submit(function( event ) {
+    	alert("In submit");
+    	$("input[name*=radio-choice-]:checked").each(function(i,o) {
+		   	//alert(o.id +" "+o.value);
+	   		sessionStorage.setItem(o.name.substring(o.id.lastIndexOf("-")+1), o.value);
+	           
+		}); 
+		window.location="secondarytheme.html";
+		return false;
+	});
+});
+</script>
 </head>
 <body>
 	<div id="header-area">
@@ -34,23 +52,28 @@
 
 <div class="clear"></div>
 <div id="main">
-<form id="event" action="secondarytheme.html" method="post" data-ajax="false">
+<form id="profile" method="post" data-ajax="false">
 	<header>Do you know a little more about attendees at this time?</header><br/>
 	
 		<div class="ui-grid-a" style="width: 100%; align: centre;">
 			<div class="ui-block-a" >
-				<label for="radio-1">Select majority age group </label>
+				<label for="radio-1">Select majority age group (in years) </label>
 			</div>
 			<div class="ui-block-b">	
 				<fieldset data-role="controlgroup" id="radio-1" data-type="horizontal">
-					<input name="radio-choice-1" id="radio-choice-1a" value="A1" type="radio" checked="checked"/>
-					<label for="radio-choice-1a">&lt; 25 years</label>
-					<input name="radio-choice-1" id="radio-choice-1b" value="B1" type="radio"/>
-					<label for="radio-choice-1b">25 - 50 years</label>
-					<input name="radio-choice-1" id="radio-choice-1c" value="C1" type="radio"/>
-					<label for="radio-choice-1c">&gt; 50 years</label>
+					<input name="radio-choice-age" id="radio-choice-1a" value="AGE_18_24" type="radio" checked="checked"/>
+					<label for="radio-choice-1a">18 - 25</label>
+					<input name="radio-choice-age" id="radio-choice-1b" value="AGE_25_34" type="radio"/>
+					<label for="radio-choice-1b">25 - 34</label>
+					<input name="radio-choice-age" id="radio-choice-1c" value="AGE_35_44" type="radio"/>
+					<label for="radio-choice-1c">35 - 44</label>
+					<input name="radio-choice-age" id="radio-choice-1d" value="AGE_45_54" type="radio"/>
+					<label for="radio-choice-1d">45 - 54</label>
+					<input name="radio-choice-age" id="radio-choice-1e" value="AGE_55_64" type="radio"/>
+					<label for="radio-choice-1e">55 - 64</label>
+					<input name="radio-choice-age" id="radio-choice-1f" value="AGE_65_OR_MORE" type="radio"/>
+					<label for="radio-choice-1f">&gt; 65</label>
 				</fieldset>
-				<input type="hidden" name="selectedAge" id="selectedAge" value="" />
 			</div>	
 
 			<div class="ui-block-a" >
@@ -58,14 +81,15 @@
 			</div>
 			<div class="ui-block-b">	
 				<fieldset data-role="controlgroup" id="radio-2" data-type="horizontal">
-					<input name="radio-choice-2" id="radio-choice-2a" value="A2" type="radio" checked="checked"/>
-					<label for="radio-choice-2a">Caucasian</label>
-					<input name="radio-choice-2" id="radio-choice-2b" value="B2" type="radio"/>
-					<label for="radio-choice-2b">Latino</label>
-					<input name="radio-choice-2" id="radio-choice-2c" value="C2" type="radio"/>
-					<label for="radio-choice-2c">Asian</label>
+					<input name="radio-choice-race" id="radio-choice-2a" value="RACE_ASIAN" type="radio" checked="checked"/>
+					<label for="radio-choice-2a">Asian</label>
+					<input name="radio-choice-race" id="radio-choice-2b" value="RACE_WHITE" type="radio"/>
+					<label for="radio-choice-2b">White</label>
+					<input name="radio-choice-race" id="radio-choice-2c" value="RACE_BLACK" type="radio"/>
+					<label for="radio-choice-2c">Black</label>
+					<input name="radio-choice-race" id="radio-choice-2d" value="RACE_HISPANIC" type="radio"/>
+					<label for="radio-choice-2d">Hispanic</label>
 				</fieldset>
-				<input type="hidden" name="selectedRace" id="selectedRace" value="" />
 			</div>	
 			
 			<div class="ui-block-a">
@@ -73,16 +97,15 @@
 			</div>
 			<div class="ui-block-b">
 				<fieldset data-role="controlgroup" id="radio-3" data-type="horizontal">
-					<input name="radio-choice-3" id="radio-choice-3a" value="A3" type="radio" checked="checked"/>
+					<input name="radio-choice-gender" id="radio-choice-3a" value="male" type="radio" checked="checked"/>
 					<label for="radio-choice-3a">Male</label>
-					<input name="radio-choice-3" id="radio-choice-3b" value="B3" type="radio"/>
+					<input name="radio-choice-gender" id="radio-choice-3b" value="female" type="radio"/>
 					<label for="radio-choice-3b">Female</label>
 				</fieldset>
-				<input type="hidden" name="selectedSex" id="selectedSex" value="" />
 			</div>	
 			<div class="ui-block-a"></div>
 			<div class="ui-block-b" style="width: 25%">
-				<input type="submit" value="Save and Next" data-icon="arrow-r" data-iconpos="right"/>
+				<button type="submit" value="Save and Next" data-icon="arrow-r" data-iconpos="right"></button>
 			</div>
 		</div>
 		</form>

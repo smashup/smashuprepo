@@ -1,0 +1,38 @@
+[
+    {
+        "key": "BREAKFAST",
+        "value": "CEREAL-READY TO EAT"
+    },
+    {
+        "key": "TISSUE",
+        "value": "FACIAL TISSUE"
+    },
+    {
+        "key": "LOTION",
+        "value": "HAND AND BODY LOTION-ADULT"
+    },
+    {
+        "key": "HEALTH",
+        "value": "HEALTH BARS AND STICKS"
+    },
+    {
+        "key": "CHIPS",
+        "value": "SNACKS-POTATO CHIPS"
+    },
+    {
+        "key": "DRINK",
+        "value": "SPORT DRINK"
+    },
+    {
+        "key": "TOOTH",
+        "value": "TOOTH CLEANER"
+    },
+    {
+        "key": "DENTAL",
+        "value": "TOOTHBRUSHES"
+    },
+    {
+        "key": "WATER",
+        "value": "WATER-BOTTLED-NONCARBONATED"
+    }
+]

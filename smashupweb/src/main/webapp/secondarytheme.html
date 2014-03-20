@@ -24,8 +24,10 @@
 <![endif]-->
 <script type="text/javascript">
 $(document).ready(function () {
-	
-	
+	for(var i=0; i < sessionStorage.length; i++){
+	    var propertyName = sessionStorage.key(i);
+	    //alert(  i + " : " + propertyName + " = " + sessionStorage.getItem(propertyName));
+	}
 	$.getJSON(
 			"sec-category.json",
 			 function(data) {
@@ -45,9 +47,8 @@ $(document).ready(function () {
 	}
 	//submit form values
 	   $(document).on('click', '#submit', function() { // catch the form's submit event
-			alert($("#selectImage option:selected").val());
-			$("#selectImage option:selected").val().each(function (obj) {
-				alert(obj);
+			$("#selectImage option:selected").each(function (i,o) {
+				alert(o.value);
 			});
 		    
 		    
