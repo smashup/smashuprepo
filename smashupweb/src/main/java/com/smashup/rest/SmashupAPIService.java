@@ -53,7 +53,7 @@ public class SmashupAPIService {
 			String test = null;
 			if(category.equalsIgnoreCase("DRINK")){
 				test = "[{\"category\":\"DRINK\",\"imageurl\":\"http://ecx.images-amazon.com/images/I/51XtLqsnIoL._SY300_.jpg\"}]";
-			} else if(category.equalsIgnoreCase("SPORT")){
+			} else if(category.equalsIgnoreCase("HEALTH")){
 				test = "[{\"category\":\"JUICES\",\"imageurl\":\"http://ecx.images-amazon.com/images/I/41G9RKB3WBL._SL500_AA300_.jpg\"},{\"category\":\"NUTRITIONAL\",\"imageurl\":\"http://ecx.images-amazon.com/images/I/21Twj3Y83jL._SL500_AA300_.jpg\"}]";
 			} else if(category.equalsIgnoreCase("BREAKFAST")){
 				test = "[{\"category\":\"JUICES\",\"imageurl\":\"http://ecx.images-amazon.com/images/I/41G9RKB3WBL._SL500_AA300_.jpg\"},{\"category\":\"NUTRITIONAL\",\"imageurl\":\"http://ecx.images-amazon.com/images/I/21Twj3Y83jL._SL500_AA300_.jpg\"}]";
