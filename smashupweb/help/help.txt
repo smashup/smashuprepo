@@ -35,3 +35,9 @@ http://localhost:8080/smashupweb/rest/nielson/0016000275270
 Useful Links -
 Excel data to JSON
 http://shancarter.github.io/mr-data-converter/
+
+
+######################
+##SmashupAPi
+#get Secondary Theme
+http://localhost:8080/smashupweb/rest/smashupapi/drink

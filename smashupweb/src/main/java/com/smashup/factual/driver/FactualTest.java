@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -91,7 +92,7 @@ public class FactualTest {
   private static String SANDBOX_TABLE = "us-sandbox";
   private static Factual factual;
   //TODO private static final File AUTH = new File(new File(System.getProperty("user.home"), ".factual"), "factual-auth.yaml");
-  private static final File AUTH = new File(new File(System.getProperty("user.home"), "factual"), "factual-auth.yaml");
+  private static File AUTH = null; //new File(new File(System.getProperty("user.home"), "factual"), "factual-auth.yaml");
   
   final double latitude = 34.06018;
   final double longitude = -118.41835;
@@ -1366,10 +1367,16 @@ public class FactualTest {
 
   public static Factual factual() {
 	
-	  //TODO
-		System.getProperties().put("http.proxyHost", "172.28.184.18");
-		System.getProperties().put("http.proxyPort", "8080");
-	  
+	//TODO
+	System.getProperties().put("http.proxyHost", "172.28.184.18");
+	System.getProperties().put("http.proxyPort", "8080");
+		
+	ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+    URL resource = classLoader.getResource("factual-auth.yaml");
+
+    AUTH = new File(resource.getPath());
+
+    
     if (!AUTH.exists()) {
       fail("You must provide " + AUTH);
       System.err.println("You must provide " + AUTH);

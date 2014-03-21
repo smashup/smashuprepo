@@ -43,7 +43,7 @@ public class FactualAPIUtil {
 	    Query query = new Query().only("image_urls", "category").search(category);
 	    //query.field("image_urls");
 	    ReadResponse resp = factual.fetch("products-cpg", query);
-	    System.out.println(resp.getJson());
+	    //System.out.println(resp.getJson());
 	    
 	    return resp.getJson();
 	    
@@ -79,6 +79,5 @@ public class FactualAPIUtil {
 		}
 
 	}
-	
 		
 }

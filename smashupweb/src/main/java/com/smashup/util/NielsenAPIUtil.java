@@ -19,6 +19,9 @@ public class NielsenAPIUtil implements Configuration {
 
 		NielsenAPIUtil nielsonAPIUtil = new NielsenAPIUtil();
 
+		String jsonResponse = nielsonAPIUtil.getCategory();
+		System.out.println(jsonResponse);
+		
 		// netClientUtil.getResponseNielsonApi(String upc, float latitude, float
 		// longitude);
 		/*String upc = "0049000059892"; // form example
@@ -57,13 +60,13 @@ public class NielsenAPIUtil implements Configuration {
 		}*/
 		
 		//Get De				
-					
-		Map<String, Map<String, Integer>> white18_24 = nielsonAPIUtil.getAllStoresBydemography(Configuration.RACE_WHITE, Configuration.AGE_18_24);
-
-		System.out.println(white18_24.get(Configuration.RACE_WHITE+Configuration.AGE_18_24));
 
 		
-		System.out.println("Done");
+		/*Map<String, Map<String, Integer>> white18_24 = nielsonAPIUtil.getAllStoresBydemography(Configuration.RACE_WHITE, Configuration.AGE_18_24);
+		System.out.println(white18_24.get(Configuration.RACE_WHITE+Configuration.AGE_18_24));
+		System.out.println("Done");*/
+		
+		
 		
 	}
 
@@ -99,6 +102,16 @@ public class NielsenAPIUtil implements Configuration {
 
 		 return getJsonString(tmpURL);
 	 }
+	
+	public String getCategory(){
+		
+		String tmpURL = "https://nielsen.api.tibco.com:443/RMS/v1/Metadata/?apiname=manufacturerDolShr&apikey=1504-71e5a462-f1d2-4f8c-a518-0a3bd9ba1916";
+		
+		String jsonResponse = getJsonString(tmpURL);
+		List<String> category = JsonPath.read(jsonResponse, "$..category.metadataValue");
+		
+		return category.toString();
+	}
 
 	
 	// Get all the stores frequented by dominant demography

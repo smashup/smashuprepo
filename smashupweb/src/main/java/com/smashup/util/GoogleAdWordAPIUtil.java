@@ -41,7 +41,7 @@ public class GoogleAdWordAPIUtil {
 			// A Statement is not thread-safe.
 			Statement stmt = conn.createStatement();
 			String query = "SELECT ID,Category FROM productsservices";
-			System.out.println("Query " + query);
+			//System.out.println("Query " + query);
 			
 			ResultSet results = stmt.executeQuery(query);
 			Set<String> set = new HashSet<String>();
@@ -52,7 +52,7 @@ public class GoogleAdWordAPIUtil {
 					//categoryStr.split(regex)
 					//Pick the last string
 					String lastString = categoryStr.substring(categoryStr.lastIndexOf("/")+1,categoryStr.length());
-					System.out.println(lastString);
+					//System.out.println(lastString);
 					set.add(lastString);
 				}
 			}
@@ -87,7 +87,7 @@ public class GoogleAdWordAPIUtil {
 
 			String query = "SELECT ID,Category FROM productsservices";
 
-			System.out.println("Query " + query);
+			//System.out.println("Query " + query);
 
 			ResultSet results = stmt.executeQuery(query);
 
