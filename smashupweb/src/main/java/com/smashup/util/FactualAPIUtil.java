@@ -1,14 +1,24 @@
 package com.smashup.util;
 
-import static com.smashup.factual.driver.FactualTest.factual;
+//import static com.smashup.factual.driver.FactualTest.factual;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
+import org.yaml.snakeyaml.Yaml;
 
 import com.factual.driver.Factual;
 import com.factual.driver.Query;
 import com.factual.driver.ReadResponse;
+import com.google.common.io.Closeables;
 
 public class FactualAPIUtil {
+	private Factual factual;
+	private static File AUTH = null;
 
 	// http://www.factual.com/data/t/products-cpg-nutrition#q=0016000275270
 
@@ -79,5 +89,39 @@ public class FactualAPIUtil {
 		}
 
 	}
+	
+	private static Map loadMapFromYaml(File file) {
+	    InputStream is = null;
+	    try {
+	      is = FileUtils.openInputStream(file);
+	      return (Map) (new Yaml()).load(is);
+	    } catch (IOException e) {
+	      throw new RuntimeException(e);
+	    } finally {
+	      Closeables.closeQuietly(is);
+	    }
+	  }
+
+	  public static Factual factual() {
+		
+		//TODO
+		System.getProperties().put("http.proxyHost", "172.28.184.18");
+		System.getProperties().put("http.proxyPort", "8080");
+			
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+	    URL resource = classLoader.getResource("factual-auth.yaml");
+
+	    AUTH = new File(resource.getPath());
+
+	    
+	    if (!AUTH.exists()) {
+	      //fail("You must provide " + AUTH);
+	      System.err.println("You must provide " + AUTH);
+	      throw new IllegalStateException("Could not find " + AUTH);
+	    } else {
+	      Map auth = loadMapFromYaml(AUTH);
+	      return new Factual((String) auth.get("key"), (String) auth.get("secret"));
+	    }
+	  }
 		
 }
